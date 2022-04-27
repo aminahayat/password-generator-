@@ -1,11 +1,12 @@
 // Assignment Code
-
 var generateBtn = document.querySelector("#generate");
 
+// Alert/confirmation boxes - check if they want each type of character.
+// Could probably do this in one function, and save the results as an array. 
 function checkCapitals() {
   if (confirm("Do you want to include capital letters?") == true) {
     return true;
-  } else {return false} 
+  } else {return false}
 };
 
 function checkLower() {
@@ -14,7 +15,7 @@ function checkLower() {
   } else {return false}
 }
 
-function checkDigits () {
+function checkDigits() {
   if (confirm("Do you want to include numbers?") == true) {
     return true;
   } else {return false}
@@ -26,11 +27,11 @@ function checkSpecials() {
   } else {return false}
 }
 
-// Function to check at least one type of character is chosen
-function checkSomethingChosen() { 
+// Function to check at least one type of character is chosen. 
+function checkSomethingChosen() {
 }
 
-//Add all desired characters into a single string value
+//Add all desired characters into a single string value.
 function selectCharacters() {
   let addCaps = checkCapitals();
   let chosenCharacters = "";
@@ -43,7 +44,7 @@ function selectCharacters() {
     const passwordLowercase = "abcdefghijklmnopqrstuvwxyz";
     chosenCharacters = chosenCharacters.concat(passwordLowercase);
   }
-  let addDigits =checkDigits();
+  let addDigits = checkDigits();
   if (addDigits === true) {
     const passwordDigits = "0123456789";
     chosenCharacters = chosenCharacters.concat(passwordDigits);
@@ -57,11 +58,9 @@ function selectCharacters() {
 }
 
 // Create / store the users input for chosen length.
-function ChooseLength() {
-  let userInput = prompt(
-    "How many characters would you like? Please pick a number between 8 and 128.",
-    "8"
-  );
+// Must be more than 8 and less than 128. 
+function chooseLength() {
+  let userInput = prompt("How many characters would you like? Please pick a number between 8 and 128.", "8");
   if (userInput >= 8 && userInput <= 128) {
     return userInput;
   } else {
@@ -75,7 +74,7 @@ function generatePassword() {
   let chosenCharacters = selectCharacters();
   let chosenLength = chooseLength();
   let totalCharOptions = chosenCharacters.length;
-
+  
   let password = "";
   for (let passLength = 0; passLength < chosenLength; passLength++) {
     let randNum = Math.random() * totalCharOptions;
@@ -83,7 +82,7 @@ function generatePassword() {
     let newCharacter = chosenCharacters.substring(randChoice, randChoice + 1);
     password = password.concat(newCharacter);
   }
-  return password
+  return password;
 }
 
 // Write password to the #password input
