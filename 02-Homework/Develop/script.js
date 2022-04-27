@@ -19,7 +19,7 @@ function checkLower() {
   }
 }
 
-function checkDigits() {
+function checkLower () {
   if (confirm("Do you want to include numbers?") == true) {
     return true;
   } else {
