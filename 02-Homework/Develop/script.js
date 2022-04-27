@@ -54,7 +54,7 @@ function selectCharacters() {
     const passwordSpecialCharacters = "!\"#$%&'()*,-./:;<=>?@[]^_`{}|~";
     chosenCharacters = chosenCharacters.concat(passwordSpecialCharacters);
   }
-  return;
+  return chosenCharacters;
 }
 
 // Create / store the users input for chosen length.
