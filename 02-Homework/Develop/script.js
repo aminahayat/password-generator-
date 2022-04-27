@@ -54,7 +54,7 @@ function selectCharacters() {
     const passwordSpecialCharacters = "!\"#$%&'()*,-./:;<=>?@[]^_`{}|~";
     chosenCharacters = chosenCharacters.concat(passwordSpecialCharacters);
   }
-  return chosenCharacters;
+  return;
 }
 
 // Create / store the users input for chosen length.
@@ -62,7 +62,7 @@ function selectCharacters() {
 function chooseLength() {
   let userInput = prompt("How many characters would you like? Please pick a number between 8 and 128.", "8");
   if (userInput >= 8 && userInput <= 128) {
-    return userInput
+    return userInput;
   } else {
     alert("Invalid Input. We will give you a default password of length 8.");
     return 8;
