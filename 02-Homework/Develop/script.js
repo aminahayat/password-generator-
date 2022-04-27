@@ -51,8 +51,8 @@ function selectCharacters() {
     const passwordLowercase = "abcdefghijklmnopqrstuvwxyz";
     chosenCharacters = chosenCharacters.concat(passwordLowercase);
   }
-  let addDigits = checkDigits();
-  if (addDigits === true) {
+  let addDigits ==checkDigits();
+  if (addDigits == true) {
     const passwordDigits = "0123456789";
     chosenCharacters = chosenCharacters.concat(passwordDigits);
   }
