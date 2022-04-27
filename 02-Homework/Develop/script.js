@@ -51,8 +51,8 @@ function selectCharacters() {
     const passwordLowercase = "abcdefghijklmnopqrstuvwxyz";
     chosenCharacters = chosenCharacters.concat(passwordLowercase);
   }
-  let addDigits ==checkDigits();
-  if (addDigits == true) {
+  let addDigits =checkDigits();
+  if (addDigits === true) {
     const passwordDigits = "0123456789";
     chosenCharacters = chosenCharacters.concat(passwordDigits);
   }
@@ -66,7 +66,7 @@ function selectCharacters() {
 
 // Create / store the users input for chosen length.
 // Must be more than 8 and less than 128.
-function chooseLength() {
+function ChooseLength() {
   let userInput = prompt(
     "How many characters would you like? Please pick a number between 8 and 128.",
     "8"
@@ -92,7 +92,7 @@ function generatePassword() {
     let newCharacter = chosenCharacters.substring(randChoice, randChoice + 1);
     password = password.concat(newCharacter);
   }
-  return password;
+  return password
 }
 
 // Write password to the #password input
@@ -104,4 +104,4 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click");
