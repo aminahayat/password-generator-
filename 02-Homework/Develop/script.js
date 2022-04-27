@@ -1,44 +1,36 @@
 // Assignment Code
+
 var generateBtn = document.querySelector("#generate");
 
-// Alert/confirmation boxes - check if they want each type of character.
-// Could probably do this in one function, and save the results as an array.
 function checkCapitals() {
   if (confirm("Do you want to include capital letters?") == true) {
     return true;
-  } else {
-    return false;
-  }
-}
+  } else {return false} 
+};
 
 function checkLower() {
   if (confirm("Do you want to include lowercase letters?") == true) {
     return true;
-  } else {
-    return false;
-  }
+  } else {return false}
 }
 
 function checkDigits () {
   if (confirm("Do you want to include numbers?") == true) {
     return true;
-  } else {
-    return false;
-  }
+  } else {return false}
 }
 
 function checkSpecials() {
   if (confirm("Do you want to include special characters?") == true) {
     return true;
-  } else {
-    return false;
-  }
+  } else {return false}
 }
 
-// Function to check at least one type of character is chosen.
-function checkSomethingChosen() {}
+// Function to check at least one type of character is chosen
+function checkSomethingChosen() { 
+}
 
-//Add all desired characters into a single string value.
+//Add all desired characters into a single string value
 function selectCharacters() {
   let addCaps = checkCapitals();
   let chosenCharacters = "";
@@ -65,7 +57,6 @@ function selectCharacters() {
 }
 
 // Create / store the users input for chosen length.
-// Must be more than 8 and less than 128.
 function ChooseLength() {
   let userInput = prompt(
     "How many characters would you like? Please pick a number between 8 and 128.",
@@ -104,4 +95,4 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click");
+generateBtn.addEventListener("click", writePassword);
