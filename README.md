@@ -9,7 +9,8 @@ whilst the HTML and CSS was given, the task was to use javascript to create a pa
 * JavaScript
 
 # Application Screenshots
-![](./)
+![](./assets/images/Capture.JPG)
+![](./assets/images/captire1.JPG)
 
 
 # Deployed URL
